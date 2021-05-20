@@ -1,0 +1,31 @@
+body{ margin: 0px;
+      padding: 0px;
+      border: none;  }
+     
+
+header div { text-align: center; }
+header div h4{ font-size: 3em; }
+
+.element { width: 28%;
+           background-color: #808080;
+           padding: 20px;
+           border: 2px solid black;
+           float: left;
+           margin: 1%; }
+.element h2 { float: right;
+              padding: 12px;
+              background-color: tomato;
+              width: 30%;
+              margin-top:-20px;
+              margin-right:-20px;
+              text-transform: uppercase;
+              border: 2px solid black;
+              border-top: none;
+              border-right: none;
+              text-align: center; }
+.element p { clear: both;
+             font-size: 25px;
+              }
+#sushi { background-color: #a30000;
+         color: white; }                                                      
+#beef { background-color: #999966; }
