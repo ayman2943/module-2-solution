@@ -67,16 +67,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	$ajaxUtils.sendGetRequest(
 	  allCategoriesUrl,
 	  buildAndShowHomeHTML, 
-	  true); // Explicitely setting the flag to get JSON from server processed into an object literal
+	  true);
 });
 
 
 
-// Builds HTML for the home page based on categories array
-// returned from the server.
+
 function buildAndShowHomeHTML (categories) {
 
-  // Load home snippet page
   $ajaxUtils.sendGetRequest(
     homeHtmlUrl,
     function (homeHtml) {
@@ -88,7 +86,7 @@ function buildAndShowHomeHTML (categories) {
       								"'"+chosenCategoryShortName+"'");
       insertHtml("#main-content", homeHtmlToInsertIntoMainPage);
     },
-    false); // False here because we are getting just regular HTML from the server, so no need to process JSON.
+    false); 
 }
 
 
@@ -111,8 +109,6 @@ dc.loadMenuCategories = function () {
 };
 
 
-// Load the menu items view
-// 'categoryShort' is a short_name for a category
 dc.loadMenuItems = function (categoryShort) {
   showLoading("#main-content");
   $ajaxUtils.sendGetRequest(
@@ -121,8 +117,7 @@ dc.loadMenuItems = function (categoryShort) {
 };
 
 
-// Builds HTML for the categories page based on the data
-// from the server
+
 function buildAndShowCategoriesHTML (categories) {
   // Load title snippet of categories page
   $ajaxUtils.sendGetRequest(
